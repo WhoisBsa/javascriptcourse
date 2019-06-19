@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM</title>
+    <style>
+        body {
+            background: darkcyan;
+            color: white;
+            font: normal 18pt Arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>First steps with DOM</h1>
+    <p>Here go the result</p>
+    <p>Learning how to usse <strong>DOM</strong> in JavaScript.</p>
+    <div id="msg">Click</div>
+    <div id="msg2">Click</div>
+
+    <script>
+        var body = document.body
+        var p1 = document.getElementsByTagName('p')[1]
+        document.write(`With innerText: ${p1.innerText}<br>`)
+        body.style.background = 'cianne'
+        p1.style.background = 'black'
+        p1.style.color = 'gold'
+
+        document.write(p1.innerHTML, '<br>')
+
+        var d = document.getElementById('msg')
+        d.style.background = 'green'
+        d.innerText = 'Waiting...'
+        //document.getElementById('msg').innerText = 'Waiting...'
+        // document.getElementsByName('msg')[0]  // if use name
+        // document.getElementsByClassName('msg')[0]
+        var selector = document.querySelector('div#msg2')
+        selector.style.background = 'blue'
+    </script>
+</body>
+</html>
