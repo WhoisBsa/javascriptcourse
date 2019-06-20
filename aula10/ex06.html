@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pr-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM EVENTS</title>
+    <style>
+        div#area {
+            background: lightblue;
+            font: normal 18pt Arial;
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div id="area">
+        EVENTS
+    </div>
+
+    <script>
+
+        var area = document.getElementById('area')
+        area.addEventListener('click', clic)
+        area.addEventListener('mouseenter', inside)
+        area.addEventListener('mouseout', outside)
+
+
+        function clic() {
+            area.innerText = 'CLICK'
+            area.style.background = 'lightcoral'
+        }
+
+        function inside() {
+            area.innerText = 'INSIDE'
+        }
+
+        function outside() {
+            area.innerText = 'OUTSIDE'
+            area.style.background = 'lightblue'
+        }
+
+    </script>
+</body>
+</html>
