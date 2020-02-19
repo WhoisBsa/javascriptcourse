@@ -20,9 +20,9 @@ function loopFunction() {
                 result.innerText += ` ${c}`
             }
         } else {
-            //Start Loop
+            //Start Loop            
             for(var c = Number(start.value); c >= Number(end.value); c += Number(step.value)) {
-             result.innerText += ` ${c}`
+                result.innerText += ` ${c}`
             }
         }
     }
