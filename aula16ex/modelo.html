@@ -12,28 +12,28 @@
 		<link rel="stylesheet" href="style.css">
   </head>
   <body class="container-fluid">
-    <header>
+    <header class="mt-5">
         <h1>Exercicio 18</h1>
     </header>
     <section>
         <div>
-          <form>
+          <form id="myform" class="p-5">
             <div class="form-group">
               <label for="number" class="col-form-label">Digite um número de 1 a 100</label>
               <input type="number" class="form-control" name="number" id="number" required="required" min="1" max="100" placeholder="Type a number">
             </div>
             <div class="form-group">
-              <button type="button" id="btnsubmmit" class="btn btn-primary">Enviar</button>
+              <button type="submit" id="btnsubmmit" class="btn btn-primary" onclick="addList()">Enviar</button>
             </div>
             </div>
             <div class="form-group">
               <label for="sel1">Lista:</label>
-              <select class="form-control" id="sel1">
-                <option></option>
-                <option></option>
-                <option></option>
-                <option></option>
+              <select class="form-control" name="list" size="10" id="sel1">
+                <!-- Options Here -->
               </select>
+            </div>
+            <div class="form-group">
+              <button type="submit" id="btnsubmmit" class="btn btn-primary" onclick="finalize()" formnovalidate>Finalizar</button>
             </div>
             <div id="res"></div>
           </form>
