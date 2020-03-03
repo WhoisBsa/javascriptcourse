@@ -10,10 +10,7 @@ function addList() {
 
   var num = document.querySelector("input#number");
   let sel = document.querySelector("select#sel1");
-  let res = document.querySelector("div#res");
   let n = Number(num.value);
-
-  res.innerHTML = "";
 
   if (!checkAll(n)) return false;
   else {
@@ -49,8 +46,9 @@ function finalize() {
 	let lst = numbers[numbers.length - 1];
 	let sum = numbers.reduce((a, b) => a + b);
 	let avg = (sum/numbers.length).toFixed(2);
-
-  numbers.sort();
+  
+  Number(numbers.sort());
+  res.innerHTML = ''
   res.innerHTML += `Ao todo, temos ${numbers.length} elementos <br>`;
   res.innerHTML += `O maior valor informado foi ${lst} <br>`;
   res.innerHTML += `O menor valor informado foi ${numbers[0]} <br>`;
